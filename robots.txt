@@ -1,5 +1,4 @@
-
 User-agent:*
 Disallow:
 
-Sitemap: https://github.com/WillebrordSnell/sitemap.xml
+Sitemap: https://mister-hope.github.io/sitemap.xml
