@@ -1,0 +1,16 @@
+import comp from "E:/R-blog/src/.vuepress/.temp/pages/Tools copy/Git/02DocumentNotes/documentnotes06.html.vue"
+const data = JSON.parse("{\"path\":\"/Tools%20copy/Git/02DocumentNotes/documentnotes06.html\",\"title\":\"6. Git分支-远程分支\",\"lang\":\"zh-CN\",\"frontmatter\":{\"order\":6,\"date\":\"2023-05-15T00:00:00.000Z\",\"category\":[\"Git\"],\"description\":\"6. Git分支-远程分支 远程引用是对远程仓库的引用（指针），包括分支、标签等等。 远程分支本质上也是一个指针，指向远程地址 查看远程引用列表与信息 上面两行命令比较少用，更常见的做法是利用远程跟踪分支。 远程跟踪分支 远程跟踪分支是远程分支状态的引用。它们是你无法移动的本地引用。一旦你进行了网络通信， Git 就会为你移动它们以精确反映远程仓库的状...\"},\"readingTime\":{\"minutes\":10.85,\"words\":3255},\"filePathRelative\":\"Tools copy/Git/02DocumentNotes/documentnotes06.md\",\"excerpt\":\"\\n<p><strong>远程引用是对远程仓库的引用（指针）</strong>，包括分支、标签等等。</p>\\n<blockquote>\\n<p>远程分支本质上也是一个指针，指向远程地址</p>\\n</blockquote>\\n<h2>查看远程引用列表与信息</h2>\\n<div class=\\\"language-sh line-numbers-mode\\\" data-highlighter=\\\"shiki\\\" data-ext=\\\"sh\\\" style=\\\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\\\"><pre class=\\\"shiki shiki-themes one-light one-dark-pro vp-code\\\"><code class=\\\"language-sh\\\"><span class=\\\"line\\\"><span style=\\\"--shiki-light:#4078F2;--shiki-dark:#61AFEF\\\">git</span><span style=\\\"--shiki-light:#50A14F;--shiki-dark:#98C379\\\"> ls-remote</span><span style=\\\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\\\"> &lt;</span><span style=\\\"--shiki-light:#50A14F;--shiki-dark:#98C379\\\">remot</span><span style=\\\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\\\">e&gt; </span><span style=\\\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\\\"># 远程引用的完整列表</span></span>\\n<span class=\\\"line\\\"><span style=\\\"--shiki-light:#4078F2;--shiki-dark:#61AFEF\\\">git</span><span style=\\\"--shiki-light:#50A14F;--shiki-dark:#98C379\\\"> remote</span><span style=\\\"--shiki-light:#50A14F;--shiki-dark:#98C379\\\"> show</span><span style=\\\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\\\"> &lt;</span><span style=\\\"--shiki-light:#50A14F;--shiki-dark:#98C379\\\">remot</span><span style=\\\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\\\">e&gt; </span><span style=\\\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\\\"># 远程分支的更多信息</span></span></code></pre>\\n<div class=\\\"line-numbers\\\" aria-hidden=\\\"true\\\" style=\\\"counter-reset:line-number 0\\\"><div class=\\\"line-number\\\"></div><div class=\\\"line-number\\\"></div></div></div>\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

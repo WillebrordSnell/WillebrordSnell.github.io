@@ -1,0 +1,16 @@
+import comp from "E:/R-blog/src/.vuepress/.temp/pages/Tools/Git/02DocumentNotes/documentnotes02.html.vue"
+const data = JSON.parse("{\"path\":\"/Tools/Git/02DocumentNotes/documentnotes02.html\",\"title\":\"2. Git分支-分支原理\",\"lang\":\"zh-CN\",\"frontmatter\":{\"order\":2,\"date\":\"2023-05-15T00:00:00.000Z\",\"category\":[\"Git\"],\"description\":\"2. Git分支-分支原理 Git 处理分支的方式可谓是难以置信的轻量，创建新分支这一操作几乎能在瞬间完成，并且在不同分支之间的切换操作也是一样便捷。 与许多其它版本控制系统不同，Git 鼓励在工作流程中频繁地使用分支与合并，哪怕一天之内进行许多次。 首次提交 在进行提交操作时，Git 会保存一个提交对象（commit object）。 假设现在有一个...\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"2. Git分支-分支原理\\\",\\\"image\\\":[\\\"https://cdn.staticaly.com/gh/xugaoyi/image_store/blog/20200906145443.jpg\\\",\\\"https://cdn.staticaly.com/gh/xugaoyi/image_store/blog/20200906152315.jpg\\\",\\\"https://cdn.staticaly.com/gh/xugaoyi/image_store/blog/20200906154109.jpg\\\",\\\"https://cdn.staticaly.com/gh/xugaoyi/image_store/blog/20200906154330.png\\\",\\\"https://cdn.staticaly.com/gh/xugaoyi/image_store/blog/20200906205325.png\\\",\\\"https://cdn.staticaly.com/gh/xugaoyi/image_store/blog/20200906205917.png\\\",\\\"https://cdn.staticaly.com/gh/xugaoyi/image_store/blog/20200906210338.png\\\",\\\"https://cdn.staticaly.com/gh/xugaoyi/image_store/blog/20200906210810.png\\\",\\\"https://cdn.staticaly.com/gh/xugaoyi/image_store/blog/20200906211331.png\\\"],\\\"datePublished\\\":\\\"2023-05-15T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"Mr.R\\\",\\\"url\\\":\\\"https://github.com/WillebrordSnell\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://mister-hope.github.io/Tools/Git/02DocumentNotes/documentnotes02.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\" \"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"2. Git分支-分支原理\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"2. Git分支-分支原理 Git 处理分支的方式可谓是难以置信的轻量，创建新分支这一操作几乎能在瞬间完成，并且在不同分支之间的切换操作也是一样便捷。 与许多其它版本控制系统不同，Git 鼓励在工作流程中频繁地使用分支与合并，哪怕一天之内进行许多次。 首次提交 在进行提交操作时，Git 会保存一个提交对象（commit object）。 假设现在有一个...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://cdn.staticaly.com/gh/xugaoyi/image_store/blog/20200906145443.jpg\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2023-05-15T00:00:00.000Z\"}]]},\"readingTime\":{\"minutes\":6.35,\"words\":1904},\"filePathRelative\":\"Tools/Git/02DocumentNotes/documentnotes02.md\",\"excerpt\":\"\\n<p>Git 处理分支的方式可谓是难以置信的轻量，创建新分支这一操作几乎能在瞬间完成，并且在不同分支之间的切换操作也是一样便捷。 与许多其它版本控制系统不同，Git 鼓励在工作流程中频繁地使用分支与合并，哪怕一天之内进行许多次。</p>\\n<h2>首次提交</h2>\\n<p>在进行提交操作时，Git 会保存一个提交对象（commit object）。</p>\\n<p>假设现在有一个工作目录，里面包含了三个将要被暂存和提交的文件。 暂存操作会为每一个文件计算校验和（使用 SHA-1 哈希算法），然后会把当前版本的文件快照保存到 Git 仓库中 （Git 使用 <em>blob</em> 对象来保存它们），最终将校验和加入到暂存区域等待提交：</p>\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
