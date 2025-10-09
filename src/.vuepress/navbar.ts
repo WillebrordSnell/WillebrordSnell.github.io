@@ -30,19 +30,26 @@ export default navbar([
     prefix: "/keyan/",
 
     children: [
-        { text: "视频理解", link: "videoUnderstanding/_videoUnderstanding" },
-        { text: "视频表征", link: "videoRepresentation/_videoRepresentation" },
-        { text: "视频对话", link: "videoDialog/_videoDialog" },
-        { text: "对比学习", link: "contrastiveLearning/_contrastiveLearning" },
-        //{ text: "多模态",   link: "multiModal/_multiModal" },  
-        { text: "经典对抗攻击",   link: "adversarialExample/adversarial-example" }, 
-        { text: "无限制对抗攻击",   link: "unrestrictedAdversarialExamples/unrestricted-adversarial-examples" },
+        {
+          text: '视频相关',
+          children: [
+            { text: "视频理解", link: "videoUnderstanding/_videoUnderstanding" },
+            { text: "视频表征", link: "videoRepresentation/_videoRepresentation" },
+            { text: "视频对话", link: "videoDialog/_videoDialog" },
+            { text: "对比学习", link: "contrastiveLearning/_contrastiveLearning" },
+        ]
+        },
+        //{ text: "多模态",   link: "multiModal/_multiModal" }, 
 
-
-
-
-
-
+        {
+          text: '对抗攻击',
+          children: [
+          { text: "经典对抗攻击",   link: "adversarialExample/adversarial-example" }, 
+          { text: "无限制对抗攻击(一)",   link: "unrestrictedAdversarialExamples/unrestricted-adversarial-examples-1" },
+          { text: "无限制对抗攻击(二)",   link: "unrestrictedAdversarialExamples/unrestricted-adversarial-examples-2" },
+        ]
+        },       
+        
     ]
   },
   {
