@@ -9,7 +9,8 @@ export default sidebar({
     "contrastiveLearning/contrastiveLearning",
     //"multiModal/multiModal",
     "adversarialExample/adversarial-example",
-    "unrestrictedAdversarialExamples/unrestricted-adversarial-examples",
+    "unrestrictedAdversarialExamples/unrestricted-adversarial-examples-1",
+    "unrestrictedAdversarialExamples/unrestricted-adversarial-examples-2",
   ],
 
   "/book/": [
