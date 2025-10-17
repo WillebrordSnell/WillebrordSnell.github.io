@@ -263,6 +263,7 @@ $$
 **MOTIVATION：** 先前提出的无限制攻击仅限于MNIST、CIFAR 和 CelebA 等数据集，并且无法显示控制图像的语义表征，容易被人类识别。由此，本文提出基于纹理(tAdv)以及颜色(cAdv)两种攻击方式
 
 <font size=4>本文核心方法：</font>
+
 **cAdv：**
 本文采用 Zhang 等人（[Colorful image colorization](https://arxiv.org/abs/1603.08511) ;  [Real-time user-guided image colorization with learned deep priors](https://arxiv.org/abs/1705.02999)）提出的颜色化模型作为攻击基础进行两种优化。在他们的工作中，网络能够在 ImageNet 上生成自然的颜色化结果，条件是给定用户提示。
 

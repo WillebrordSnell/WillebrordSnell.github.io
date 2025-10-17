@@ -44,14 +44,35 @@ export default navbar([
         {
           text: '对抗攻击',
           children: [
-          { text: "经典对抗攻击",   link: "adversarialExample/adversarial-example" }, 
+          { text: "对抗攻击经典论文",   link: "adversarialExample/adversarial-example" }, 
+          { text: "对抗攻击推荐论文",   link: "adversarialExample/adversarial-example-1" }, 
+
+        ]
+        },       
+
+        {
+          text: '无限制对抗攻击',
+          children: [
+          { text: "语义对抗攻击(一)",   link: "semanticAdversarial/semantic-adversarial" },
+
           { text: "无限制对抗攻击(一)",   link: "unrestrictedAdversarialExamples/unrestricted-adversarial-examples-1" },
           { text: "无限制对抗攻击(二)",   link: "unrestrictedAdversarialExamples/unrestricted-adversarial-examples-2" },
         ]
-        },       
-        
+        },           
     ]
   },
+
+    {
+    text: "  🥗 大杂烩",
+    prefix: "/knowledge/",
+
+    children: [
+      { text: "Diffusion演化进程", link: "Diffusion/Diffusion" },
+
+    ]
+  },
+
+
   {
     text: "  🧫 炉",
     prefix: "/train/",

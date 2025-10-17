@@ -2,19 +2,26 @@ import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
   "/keyan/": [
-
     "videoUnderstanding/videoUnderstanding",
     "videoRepresentation/videoRepresentation",
     "videoDialog/videoDialog",
     "contrastiveLearning/contrastiveLearning",
     //"multiModal/multiModal",
     "adversarialExample/adversarial-example",
+    "adversarialExample/adversarial-example-1",
+    
+    "semanticAdversarial/semantic-adversarial",
+
     "unrestrictedAdversarialExamples/unrestricted-adversarial-examples-1",
     "unrestrictedAdversarialExamples/unrestricted-adversarial-examples-2",
+
+  ],
+
+  "/knowledge/": [
+    "Diffusion/Diffusion",
   ],
 
   "/book/": [
-
     "202309" ,
     "202310" ,
     "202311" ,

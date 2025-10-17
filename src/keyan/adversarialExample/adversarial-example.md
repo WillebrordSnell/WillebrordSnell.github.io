@@ -11,6 +11,8 @@ tag:
 
 # 对抗攻击经典论文
 
+A Complete List of All (arXiv) Adversarial Example Papers（Nicholas Carlini）:https://nicholas.carlini.com/writing/2019/all-adversarial-example-papers.html
+
 ---
 ## [Explaining and harnessing adversarial examples(FGSM) [ *ICLR 2015* ]](https://arxiv.org/abs/1412.6572)     
 
@@ -22,7 +24,7 @@ tag:
 
 ![ ](./assets/img/FGSM_fig1.png "FGSM")
 
-### 代码实现：
+<font size=5> 代码实现： </font> 
 
 ``` PYTHON
 def attack(self):
@@ -92,7 +94,7 @@ def attack(self):
 
 ![ ](./assets/img/BIM_Algorithm.png "BIM Algorithm")
 
-### 迭代最不可能类别 伪代码： 
+<font size=5> 迭代最不可能类别 伪代码： </font> 
 目标每一步都朝使模型将输入分类为当前最不可能类别的方向移动
 
 输入：干净图像 X，扰动上限 ε，步长 α（例如1），迭代次数 T（可用上面经验公式）
@@ -107,7 +109,8 @@ def attack(self):
 7. end
 8. 返回 X_adv
 ```
-### 代码实现
+
+<font size=5> 代码实现： </font> 
 
 ```PYTHON
     if pred== tensor_label:#如果被正确分类则执行攻击
@@ -185,7 +188,8 @@ $\min_{\theta} \rho(\theta), \ \text{其中 } \rho(\theta) = \mathbb{E}_{(x,y)\s
 
 **PGD的思想是：** 从一个随机初始化的点开始，沿着损失函数的梯度方向反复迭代更新扰动，并在每一步把结果投影回允许的扰动集合 𝑆 中。作者发现，PGD能够持续提升损失，且相比于单步方法（如 FGSM）能够找到更强的对抗样本。更重要的是，本文的实验证明，PGD 在多次随机重启后，几乎总能收敛到相似的高损失点。这表明，PGD攻击是对内层最大化的一个近似最优解，因此可以被视作一种“通用的一阶攻击者”。
 
-### 代码实现
+<font size=5> 代码实现： </font> 
+
 ```PYTHON
 if pred== tensor_label:#如果被正确分类则执行攻击
     right+=1
@@ -238,8 +242,7 @@ if pred== tensor_label:#如果被正确分类则执行攻击
 
 >**NOTE：** 本文数学符号说明详细，并且对此前的经典对抗攻击方法做了简要总结 **[ 建议精读 ]**
 
-
-### 本文的$L_2$攻击：
+**本文的$L_2$攻击：**
 
 **原始目标：** 想在不改变图像太多的前提下，把一张图像 𝑥 改成被分类器判为某个指定目标类 𝑡 。数学上可写作带约束的问题：
 
