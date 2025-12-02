@@ -11,24 +11,70 @@ category:
 
 ## 1 提示信息
 
+```html
+::: info info
+:::
+```
+
 ::: info info
   
 :::
 
+```html
 ::: note note
 :::
+```
+
+::: note note
+:::
+
+```html
+::: tip tip
+:::
+```
 
 ::: tip tip
 :::
 
+```html
 ::: warning warning
 :::
+```
+
+::: warning warning
+:::
+
+```html
+::: danger danger
+:::
+```
 
 ::: danger danger
 :::
 
+```html
 ::: details details
 :::
+```
+
+::: details details
+:::
+
+```html
+@tab apple
+
+Apple [选项卡](https://theme-hope.vuejs.press/zh/guide/markdown/tabs.html#%E6%A1%88%E4%BE%8B)
+
+@tab banana
+
+Banana
+
+@tab orange
+
+Orange
+
+:::
+```
 
 ::: tabs
 

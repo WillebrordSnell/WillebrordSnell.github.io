@@ -9,7 +9,7 @@ category:
 ---
 **本文搬运于我的好bro：https://simeis147.github.io**
 
-# Markdown速查表
+# Markdown语法速查表
 <!-- more -->
 
 ::: tip 背景

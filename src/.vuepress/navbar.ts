@@ -36,7 +36,7 @@ export default navbar([
             { text: "视频理解", link: "videoUnderstanding/_videoUnderstanding" },
             { text: "视频表征", link: "videoRepresentation/_videoRepresentation" },
             { text: "视频对话", link: "videoDialog/_videoDialog" },
-            { text: "对比学习", link: "contrastiveLearning/_contrastiveLearning" },
+
         ]
         },
         //{ text: "多模态",   link: "multiModal/_multiModal" }, 
@@ -67,7 +67,12 @@ export default navbar([
     prefix: "/knowledge/",
 
     children: [
+      { text: "对比学习", link: "contrastiveLearning/_contrastiveLearning" },
       { text: "Diffusion演化进程", link: "Diffusion/Diffusion" },
+      { text: "因果推断入门", link: "causalInference/Causal_Inference" },
+      { text: "LLM reasoning", link: "reasoning/reasoning" },
+      
+
 
     ]
   },

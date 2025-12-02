@@ -5,7 +5,7 @@ export default sidebar({
     "videoUnderstanding/videoUnderstanding",
     "videoRepresentation/videoRepresentation",
     "videoDialog/videoDialog",
-    "contrastiveLearning/contrastiveLearning",
+
     //"multiModal/multiModal",
     "adversarialExample/adversarial-example",
     "adversarialExample/adversarial-example-1",
@@ -18,7 +18,12 @@ export default sidebar({
   ],
 
   "/knowledge/": [
+    "contrastiveLearning/contrastiveLearning",
     "Diffusion/Diffusion",
+    "causalInference/Causal_Inference",
+    "reasoning/reasoning",
+
+    
   ],
 
   "/book/": [

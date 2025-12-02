@@ -1,44 +1,41 @@
 ---
 order: 2
-date: 2023-07-22
+date: 2025-10-29
 category: 
   - Markdown
 ---
 
-# Vuepress组件库
+# Markdown 数学符号速查
 
-SiteInfo component, can be used as friend link or project display.
+## 数学模式重音符
 
-<!-- more -->
+| 示例| 代码 | 示例| 代码 | 示例| 代码 |
+| :---- | :----- | :---- | :----- | :---- | :----- |
+|$\hat{a}$|\hat{a}|$\dot{a}$|\dot{a}|$\grave{a}$|\grave{a}|
+|$\check{a}$|\check{a}|$\bar{a}$|\bar{a}|$\vec{a}$|\vec{a}|
+|$\tilde{a}$|\tilde{a}|$\ddot{a}$|\ddot{a}|$\acute{a}$|\acute{a}|
 
-## Demo
 
-Basic site info:
 
-<SiteInfo name="Mr.Hope's Blog" url="https://mister-hope.com" preview="https://theme-hope.vuejs.press/assets/image/mrhope.jpg" />
+## 小写希腊字母
 
-```md
-<SiteInfo name="Mr.Hope's Blog" url="https://mister-hope.com" preview="https://theme-hope.vuejs.press/assets/image/mrhope.jpg" />
-```
+| 示例| 代码 | 示例| 代码 | 示例| 代码 | 示例| 代码 |
+| :---- | :----- |:---- | :----- |:---- | :----- |:---- | :----- |
+|$\alpha$|\alpha|$\beta$|\beta|$\gamma$|\gamma|$\delta$|\delta|
+|$\epsilon$|\epsilon|$\varepsilon$|\varepsilon|$\zeta$|\zeta|$\eta$|\eta|
+|$\theta$|\theta|$\vartheta$|\vartheta|$\iota$|\iota|$\kappa$|\kappa|
+|$\lambda$|\lambda|$\mu$|\mu|$\nu$|\nu|$\xi$|\xi|
+|$\upsilon$|\upsilon|$\pi$|\pi|$\varpi$|\varpi|$\rho$|\rho|
+|$\varrho$|\varrho|$\sigma$|\sigma|$\varsigma$|\varsigma|$\tau$|\tau|
+|$o$|o|$\phi$|\phi|$\varphi$|\varphi|$\chi$|\chi|
+|$\psi$|\psi|$\omega$|\omega|$\nabla$|\nabla|
 
-Site info with more properties:
+## 大写希腊字母
 
-<SiteInfo
-  name="Mr.Hope's Blog"
-  desc="Where there is light, there is hope"
-  url="https://mister-hope.com"
-  logo="https://mister-hope.com/logo.svg"
-  repo="https://github.com/Mister-Hope/Mister-Hope.github.io"
-  preview="https://theme-hope.vuejs.press/assets/image/mrhope.jpg"
-/>
+| 示例| 代码 | 示例| 代码 | 示例| 代码 |
+| :---- | :----- | :---- | :----- | :---- | :----- |
+|$\Gamma$|\Gamma|$\Delta$|\Delta|$\Theta$|\Theta|
+|$\Lambda$|\Lambda|$\Xi$|\Xi|$\Pi$|\Pi|
+|$\Sigma$|\Sigma|$\Upsilon$|\Upsilon|$\Psi$|\Psi|
+|$\Phi$|\Phi|$\Omega$|\Omega|
 
-```md
-<SiteInfo
-  name="Mr.Hope's Blog"
-  desc="Where there is light, there is hope"
-  url="https://mister-hope.com"
-  logo="https://mister-hope.com/logo.svg"
-  repo="https://github.com/Mister-Hope/Mister-Hope.github.io"
-  preview="https://theme-hope.vuejs.press/assets/image/mrhope.jpg"
-/>
-```

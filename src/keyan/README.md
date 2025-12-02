@@ -17,6 +17,9 @@ category:
 - [对比学习](./contrastiveLearning/_contrastiveLearning.md)
 
 
+## 有意思
 
+[The Curious Case of Neural Text Degeneration ( *ICLR 2020* )](https://arxiv.org/abs/1904.09751)
 
+[Mask-Predict: Parallel Decoding of Conditional Masked Language Models( *ACL 2019* )](https://aclanthology.org/D19-1633/)
 
