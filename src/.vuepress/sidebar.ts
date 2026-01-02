@@ -22,7 +22,7 @@ export default sidebar({
     "Diffusion/Diffusion",
     "causalInference/Causal_Inference",
     "reasoning/reasoning",
-
+    "ReinforcementLearning/ReinforcementLearning",
     
   ],
 

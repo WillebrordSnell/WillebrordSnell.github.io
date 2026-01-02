@@ -70,8 +70,8 @@ export default navbar([
       { text: "对比学习", link: "contrastiveLearning/_contrastiveLearning" },
       { text: "Diffusion演化进程", link: "Diffusion/Diffusion" },
       { text: "因果推断入门", link: "causalInference/Causal_Inference" },
-      { text: "LLM reasoning", link: "reasoning/reasoning" },
-      
+      { text: "大模型推理", link: "reasoning/reasoning" },
+      { text: "强化学习", link: "ReinforcementLearning/ReinforcementLearning" },     
 
 
     ]
