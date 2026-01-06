@@ -313,3 +313,67 @@ $$
 7. 把生成的这些语义对抗样本拿来做对抗训练（ASA-AT）。让模型在训练时就见过这种“语义级别”的攻击，从而增强真正的语义鲁棒性。
 
 **总结：** 本文不是在输入上“瞎加噪”，而是先从模型中间层里“找出它最在乎的那一小撮语义通道”，再精确地操控这些通道，并把这种语义扰动折返到输入图像上，从而得到既自然、又非常针对模型弱点的对抗样本。
+
+
+## [Universal Adversarial Attack on Attention and the Resulting Dataset DAmageNet（AoA） [IEEE TPAMI 2022]](https://ieeexplore.ieee.org/abstract/document/9238430)
+
+**MOTIVATION：** 本文提出白盒攻击在已知模型结构与参数时很容易成功，但真实场景下攻击者通常无法获得完整模型信息，因此更关心 黑盒攻击。黑盒攻击主要分为两类：一类是查询式（通过大量查询估计梯度），但查询次数大、容易被检测；另一类是迁移式（在替代模型上做白盒攻击并迁移到受害模型），但跨架构迁移往往不理想，通常只有在模型结构相近时效果才好，这与黑盒攻击希望“跨模型泛化”的目标矛盾。作者的核心思路为：要提升黑盒迁移性，应该攻击不同 DNN 共享的“语义层面脆弱性”，而不是依赖具体结构相似性。论文选择了一个被多种视觉模型共享的语义属性——注意力热力图（attention heat map）：即便架构不同，模型在同一图像上的注意区域往往呈现相似性，因此攻击“注意力”可能天然更可迁移。
+
+:::details 注意力热力图
+
+**前向可视化：** 通过观察输入变化所引起的输出变化来推断注意力。输入变化可以通过加入[噪声](https://arxiv.org/abs/1412.6856)、[遮挡（masking）](https://link.springer.com/chapter/10.1007/978-3-319-10590-1_53) 或[扰动](https://www.nature.com/articles/nmeth.3547) 来实现，但这类方法通常耗时较大，并可能引入随机性。
+
+**[反向可视化](https://arxiv.org/abs/1412.6806)：**  是从输出向输入方向逐层计算相邻层之间的相关性（relevance）来获得热力图：本层的注意力由下一层的注意力以及本层的网络权重共同决定。
+
+:::
+
+<font size=4><b>本文核心方法：</b></font>
+
+如下图所示，三张图像在不同模型上的注意力热力图，其中逐像素热力图刻画了输入对预测的贡献。即使网络架构不同，各模型的注意力也表现出相似性。
+
+![](./assets/img/AoA_fig1.png)
+
+与现有主要针对输出进行攻击的方法不同，AoA 的目标是改变注意力热力图。本文使用 [SGLRP（Softmax Gradient LRP）](https://ieeexplore.ieee.org/abstract/document/9022542)来计算注意力热力图 ℎ(𝑥,𝑦) ，因为它更擅长区分目标类别的注意力与其他类别的注意力。
+
+![](./assets/img/AoA_fig2.png)
+
+本文给出三种改变注意力热力图的潜在方式：
+
+1. **抑制正确类别注意力热力图$h(x,y_{ori})$的幅值：**
+    当网络对正确类别的注意力强度降低时，其他类别的注意力可能会上升并最终超过正确类别，导致模型转而去寻找其他类别的信息而不是正确类别的信息，从而产生错误预测。文中将其称为“抑制损失（suppress loss）”：
+    $$
+    L_{\text{supp}}(x)=\left\|h(x,y_{\text{ori}})\right\|_{1}.
+    $$
+    其中，$\left\|h(x,y_{\text{ori}})\right\|_{1}$表示逐分量的$l_1$范数
+
+2. **分散$h(x,y_{ori})$的关注点：** 
+    直觉上，当注意力从原本的感兴趣区域（ROI）被分散开，模型可能会失去预测能力。此时我们不要求网络把注意力集中到任何错误类别的信息上，而是引导其关注图像中的无关区域。对应的“分散损失（distract loss）”为：
+    $$
+    L_{\text{dstc}}(x)=\left\|
+    \frac{h(x,y_{\text{ori}})}{\max\!\left(h(x,y_{\text{ori}})\right)}
+    -
+    \frac{h(x_{\text{ori}},y_{\text{ori}})}{\max\!\left(h(x_{\text{ori}},y_{\text{ori}})\right)}
+    \right\|_{1}.
+    $$
+    这里使用了自归一化（self-normalization）以消除注意力幅值大小带来的影响。
+
+3. **缩小$h(x,y_{ori})$与$h(x,y_{sec}(x))$的差距，其中$y_{sec}(x)$是预测概率第二大的类别：** 
+    若第二类的注意力幅值超过正确类，网络会更关注错误预测对应的信息。这一思路受 C&W 攻击启发。本文称其为“边界损失（boundary loss）”，形式为：
+    $$
+    L_{\text{bdry}}(x)=\left\|h(x,y_{\text{ori}})\right\|_{1}-\left\|h(x,y_{\text{sec}}(x))\right\|_{1}.
+    $$
+    不同模型的注意力热力图数值尺度差异较大，因此自归一化可能提升对抗样本的可迁移性。于是，除了 $L_{bdry}$ 外，还可以考虑两者的比值，得到“对数边界损失（logarithmic boundary loss）”：
+    $$
+    L_{\log}(x)=\log\!\left(\left\|h(x,y_{\text{ori}})\right\|_{1}\right)
+    -\log\!\left(\left\|h(x,y_{\text{sec}}(x))\right\|_{1}\right).
+    $$
+
+
+![算法步骤](./assets/img/AoA_fig3.png)
+
+
+
+
+
+
+

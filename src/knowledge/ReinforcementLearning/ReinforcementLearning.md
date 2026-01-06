@@ -62,7 +62,73 @@ tag:
 
 ## Q-learning
 
+<font size=4><b>BASIC IDEA:</b></font>
 
+![](./assets/img/Q_learning_fig1.png)
+
+![](./assets/img/Q_learning_fig2.png)
+
+![](./assets/img/Q_learning_fig3.png)
+
+![](./assets/img/Q_learning_fig4.png)
+
+![](./assets/img/Q_learning_fig5.png)
+
+![](./assets/img/Q_learning_fig6.png)
+
+![](./assets/img/Q_learning_fig7.png)
+
+![](./assets/img/Q_learning_fig8.png)
+
+![](./assets/img/Q_learning_fig9.png)
+
+![](./assets/img/Q_learning_fig10.png)
+
+![](./assets/img/Q_learning_fig11.png)
+
+![](./assets/img/Q_learning_fig12.png)
+
+![](./assets/img/Q_learning_fig13.png)
+
+![](./assets/img/Q_learning_fig14.png)
+
+<font size=4><b> ADVANCED TIPS:</b></font>
+
+![](./assets/img/Q_learning_fig15.png)
+
+![](./assets/img/Q_learning_fig16.png)
+
+![](./assets/img/Q_learning_fig17.png)
+
+![](./assets/img/Q_learning_fig18.png)
+
+![](./assets/img/Q_learning_fig19.png)
+
+![](./assets/img/Q_learning_fig20.png)
+
+![](./assets/img/Q_learning_fig21.png)
+
+![](./assets/img/Q_learning_fig22.png)
+
+![](./assets/img/Q_learning_fig23.png)
+
+![](./assets/img/Q_learning_fig24.png)
+
+![](./assets/img/Q_learning_fig25.png)
+
+![](./assets/img/Q_learning_fig26.png)
+
+![](./assets/img/Q_learning_fig27.png)
+
+![](./assets/img/Q_learning_fig28.png)
+
+<font size=4><b> CONTINUOUS ACTIONS:</b></font>
+
+![](./assets/img/Q_learning_fig29.png)
+
+![](./assets/img/Q_learning_fig30.png)
+
+![](./assets/img/Q_learning_fig31.png)
 
 ## Actor-Critic
 
